@@ -1,0 +1,21 @@
+Lambda: 1.0 Alpha: 10.0 Rank: 8 Produced RMSE of 0.03128204092813031 
+Lambda: 1.0 Alpha: 10.0 Rank: 16 Produced RMSE of 0.031209175581209652 
+Lambda: 1.0 Alpha: 10.0 Rank: 32 Produced RMSE of 0.03116572424952008 
+Lambda: 10.0 Alpha: 10.0 Rank: 8 Produced RMSE of 0.03163246585234661 
+Lambda: 10.0 Alpha: 10.0 Rank: 16 Produced RMSE of 0.03163246585234661 
+Lambda: 10.0 Alpha: 10.0 Rank: 32 Produced RMSE of 0.03163246585234661 
+Lambda: 1.0 Alpha: 40.0 Rank: 8 Produced RMSE of 0.027157533550352376 
+Lambda: 1.0 Alpha: 40.0 Rank: 16 Produced RMSE of 0.026827741699611708 
+Lambda: 1.0 Alpha: 40.0 Rank: 32 Produced RMSE of 0.026717258416109477 
+Lambda: 10.0 Alpha: 40.0 Rank: 8 Produced RMSE of 0.03163246585233765 
+Lambda: 10.0 Alpha: 40.0 Rank: 16 Produced RMSE of 0.03163246585232619 
+Lambda: 10.0 Alpha: 40.0 Rank: 32 Produced RMSE of 0.031632465852299806 
+Lambda: 1.0 Alpha: 60.0 Rank: 8 Produced RMSE of 0.030867133206493664 
+Lambda: 1.0 Alpha: 60.0 Rank: 16 Produced RMSE of 0.031938792199053954 
+Lambda: 1.0 Alpha: 60.0 Rank: 32 Produced RMSE of 0.03388156645271553 
+Lambda: 10.0 Alpha: 60.0 Rank: 8 Produced RMSE of 0.031632465841033346 
+Lambda: 10.0 Alpha: 60.0 Rank: 16 Produced RMSE of 0.03163246584102217 
+Lambda: 10.0 Alpha: 60.0 Rank: 32 Produced RMSE of 0.03163246584099654 
+Best Model:
+Lambda: 1.0 Alpha: 40.0 Rank: 32 Produced RMSE of 0.026717258416109477
+Best model test dataset RMSE:0.02522357253146869
