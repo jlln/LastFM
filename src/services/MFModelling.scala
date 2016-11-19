@@ -56,9 +56,7 @@ object MFModelling {
     val best_model = ALS.trainImplicit(train,best_rank,10,best_lambda,best_alpha)
     val n_test = test.count()
     val best_model_test_rmse = getRMSE(best_model,test,n_test,max_pref,min_pref)
-    log_writer.write(s"Best model test dataset RMSE:$best_model_test_rmse")
-    log_writer.flush()
-    log_writer.close()
+    log.warn(s"Best model test dataset RMSE:$best_model_test_rmse")
   }
 
 }
