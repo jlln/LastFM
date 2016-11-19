@@ -21,6 +21,7 @@ object MFModelling {
   def tune(ratings:RDD[Rating],sc:SparkContext) = {
     val output_log = new File("output_log.txt")
     val log_writer = new PrintWriter(output_log)
+    val log = org.apache.log4j.LogManager.getLogger("MLlog")
     val n_cases = ratings.count()
     val partitions = ratings.randomSplit(Array(0.6,0.2,0.2),1234L)
     val train = partitions(0)
@@ -46,13 +47,11 @@ object MFModelling {
         best_rank = rank
         best_score = model_rmse
       }
-      log_writer.write(s"Lambda: $lambda Alpha: $alpha Rank: $rank Produced RMSE of $model_rmse \n")
-      log_writer.flush()
+      log.warn(s"Lambda: $lambda Alpha: $alpha Rank: $rank Produced RMSE of $model_rmse")
     }
-    log_writer.write("Best Model:\n")
-    log_writer.flush()
-    log_writer.write(s"Lambda: $best_lambda Alpha: $best_alpha Rank: $best_rank Produced RMSE of $best_score\n")
-    log_writer.flush()
+    log.warn("Best Model:")
+    log.warn(s"Lambda: $best_lambda Alpha: $best_alpha Rank: $best_rank Produced RMSE of $best_score")
+
 
     val best_model = ALS.trainImplicit(train,best_rank,10,best_lambda,best_alpha)
     val n_test = test.count()

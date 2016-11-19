@@ -1,0 +1,2 @@
+[WARN] 2016-11-19 16:51:41,614 MLlog apply$mcVI$sp - Lambda: 1.0 Alpha: 10.0 Rank: 8 Produced RMSE of 0.0313311007425814
+[WARN] 2016-11-19 16:52:59,150 MLlog apply$mcVI$sp - Lambda: 1.0 Alpha: 10.0 Rank: 16 Produced RMSE of 0.031199351748588577

@@ -4,9 +4,12 @@
 
 import org.apache.spark.{SparkConf, SparkContext}
 import org.apache.spark.sql.{DataFrame, SparkSession}
+import org.apache.log4j.PropertyConfigurator
+
 object LastFM {
   def main(args: Array[String]): Unit = {
-    val conf = new SparkConf().setAppName("Entree").setMaster("local[3]")
+    PropertyConfigurator.configure("conf/log4j.properties")
+    val conf = new SparkConf().setAppName("LastFM").setMaster("local[3]")
     val sc = new SparkContext(conf)
     val sparks = new org.apache.spark.sql.SQLContext(sc)
     val input = "data/sample_user_artist.tsv"
