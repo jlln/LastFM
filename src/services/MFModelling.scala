@@ -1,6 +1,5 @@
 package services
 
-import java.io.{File, PrintWriter}
 
 import org.apache.spark.SparkContext
 import org.apache.spark.mllib.recommendation.{ALS, MatrixFactorizationModel, Rating}
@@ -19,8 +18,6 @@ object MFModelling {
   }
 
   def tune(ratings:RDD[Rating],sc:SparkContext) = {
-    val output_log = new File("output_log.txt")
-    val log_writer = new PrintWriter(output_log)
     val log = org.apache.log4j.LogManager.getLogger("MLlog")
     val n_cases = ratings.count()
     val partitions = ratings.randomSplit(Array(0.6,0.2,0.2),1234L)
